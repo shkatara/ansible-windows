@@ -1,6 +1,8 @@
 - name: Ensure IIS is installed and started
   hosts: all
   become: yes
+  become_method: runas
+  become_user: Administrator
   vars:
     service_name: IIS Admin Service
   tasks:
